@@ -19,5 +19,5 @@ public class VerCode extends Common{
 
     private String code;//验证码
 
-    private String phone;//用户id
+    private String phone;//用户手机
 }

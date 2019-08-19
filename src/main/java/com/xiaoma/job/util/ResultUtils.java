@@ -3,7 +3,6 @@ package com.xiaoma.job.util;
 import com.xiaoma.job.pojo.Result;
 import com.xiaoma.job.pojo.Status;
 
-import java.util.List;
 
 public class ResultUtils {
 

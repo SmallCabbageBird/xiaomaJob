@@ -3,24 +3,19 @@ package com.xiaoma.job.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
 import java.util.Date;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class User extends Common implements Serializable {
+public class User extends Common {
+
     @TableId(type = IdType.UUID)
     private String uid;//用户id
 
     private String username;//用户名
 
-    @JsonIgnore
     private String password;//密码
 
     private String name;//姓名
@@ -29,6 +24,9 @@ public class User extends Common implements Serializable {
 
     private Integer age;//年龄
 
+    @JsonFormat(
+            pattern = "yyyy-MM-dd",
+            timezone="GMT+8")
     private Date birthday;//生日
 
     private String phone;//手机
@@ -43,12 +41,7 @@ public class User extends Common implements Serializable {
 
     private Long integral;//积分
 
-
-
-
-    @JsonIgnore
     private int isDelete;
 
-    @JsonIgnore
     private Integer disabled;//是否禁用账号 0禁用 1不禁用
 }
