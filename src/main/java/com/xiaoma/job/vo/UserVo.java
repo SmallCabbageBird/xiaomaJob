@@ -29,6 +29,10 @@ public class UserVo implements Serializable {
     @NotBlank(message = "验证码不能为空")
     private String code;//验证码
 
+    @ApiModelProperty(name = "codeKey",value = "验证码的key",example = "32189312893103daSA",dataType = "String",required = true)
+    @NotBlank(message = "codeKey不能为空")
+    private String codeKey;//验证码
+
     @ApiModelProperty(name = "phoneCode",value = "手机验证码",example = "562311",dataType = "String",required = true)
     @NotBlank(message = "手机验证码不能为空")
     private String phoneCode;//手机验证码

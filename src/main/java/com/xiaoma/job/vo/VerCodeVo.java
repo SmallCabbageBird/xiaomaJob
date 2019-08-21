@@ -13,10 +13,10 @@ import java.io.Serializable;
 public class VerCodeVo implements Serializable {
 
     @ApiModelProperty(name = "type",value = "手机验证码类型:register注册,login登录,findPwd找回密码",example = "register",dataType = "String",required = true)
-    @NotBlank
+    @NotBlank(message = "验证码类型不能为空")
     private String type;//验证码类型
 
     @ApiModelProperty(name = "phone",value = "手机号码",example = "18578644444",dataType = "String",required = true)
-    @NotBlank
+    @NotBlank(message = "用户手机不能为空")
     private String phone;//用户手机
 }

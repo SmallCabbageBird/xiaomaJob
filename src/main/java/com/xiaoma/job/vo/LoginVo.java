@@ -20,6 +20,10 @@ public class LoginVo implements Serializable {
     @NotBlank(message = "密码不能为空")
     private String password;//密码
 
+    @ApiModelProperty(name = "codeKey",value = "验证码的key",example = "32189312893103daSA",dataType = "String",required = true)
+    @NotBlank(message = "codeKey不能为空")
+    private String codeKey;//验证码
+
     @ApiModelProperty(name = "code",value = "验证码",example = "3xbA",dataType = "String",required = true)
     @NotBlank(message = "验证码不能为空")
     private String code;//验证码
